@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.UserInterfaceController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Game">
+                  <items>
+                        <Menu fx:id="miNG" mnemonicParsing="false" text="New Game">
+                          <items>
+                              <MenuItem fx:id="miVar1" mnemonicParsing="false" onAction="#initStartGame" text="Var 1" />
+                              <MenuItem fx:id="miVar2" mnemonicParsing="false" onAction="#initStartGame" text="Var 2" />
+                              <MenuItem fx:id="miVar3" mnemonicParsing="false" onAction="#initStartGame" text="Var 3" />
+                              <MenuItem fx:id="miVar4" mnemonicParsing="false" onAction="#initStartGame" text="Var 4" />
+                              <MenuItem fx:id="miVar5" mnemonicParsing="false" onAction="#initStartGame" text="Var 5" />
+                          </items>
+                        </Menu>
+                        <MenuItem fx:id="miLG" mnemonicParsing="false" onAction="#fileToLoad" text="Load Game" />
+                        <MenuItem fx:id="miSG" mnemonicParsing="false" onAction="#fileToSave" text="Save Game" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem fx:id="miCG" mnemonicParsing="false" onAction="#closeGame" text="Close Game" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem fx:id="miHB" mnemonicParsing="false" onAction="#openHandbook" text="Handbook" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <left>
+            <VBox fx:id="vBoxYou" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: NAVY;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="YOU" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label text="Points:" textFill="WHITE">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPointsYou" text="0" textFill="WHITE">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblWinnerYou" text="Win" textFill="WHITE">
+                     <font>
+                        <Font size="42.0" />
+                     </font></Label>
+               </children></VBox>
+         </left>
+         <right>
+            <VBox fx:id="vBoxAi" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: RED;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="AI">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label text="Points:">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPointsAi" text="0">
+                     <font>
+                        <Font size="42.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblWinnerAi" text="Lose">
+                     <font>
+                        <Font size="42.0" />
+                     </font></Label>
+               </children></VBox>
+         </right>
+         <center>
+            <HBox fx:id="hBoxWrappingVBox" alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="vBoxWrappingGrdPn" alignment="CENTER" maxHeight="-Infinity" HBox.hgrow="NEVER">
+                     <children>
+                        <GridPane fx:id="grdPn" alignment="CENTER" hgap="10.0" style="-fx-background-color: MEDIUMAQUAMARINE;" vgap="10.0">
+                            <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="30.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                     </children>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
